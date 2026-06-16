@@ -1,0 +1,17 @@
+streamlit
+pandas
+selenium
+webdriver-manager
+beautifulsoup4
+matplotlib
+wordcloud
+Pillow
+nltk
+scikit-learn
+transformers
+torch
+huggingface-hub
+Sastrawi
+requests
+groq==1.1.2
+python-dotenv
