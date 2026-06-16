@@ -82,9 +82,8 @@ def generate_conclusion(
 
         return "Tidak dapat menghasilkan kesimpulan."
     except Exception as e:
-        error_msg = f"{type(e).__name__}: {str(e)}"
-        logger.error(f"Error saat generate kesimpulan: {error_msg}", exc_info=True)
-        return f"Tidak dapat menghasilkan kesimpulan karena error: {error_msg}"
+        logger.error(f"Error saat generate kesimpulan: {str(e)}")
+        return "Tidak dapat menghasilkan kesimpulan karena error sistem."
 
 
 def get_chat_response(
@@ -140,9 +139,8 @@ def get_chat_response(
 
         return "Maaf, saya tidak dapat menjawab pertanyaan Anda saat ini."
     except Exception as e:
-        error_msg = f"{type(e).__name__}: {str(e)}"
-        logger.error(f"Error saat generate chat response: {error_msg}", exc_info=True)
-        return f"Maaf, terjadi kesalahan: {error_msg}"
+        logger.error(f"Error saat generate chat response: {str(e)}")
+        return "Maaf, terjadi kesalahan saat memproses pertanyaan Anda."
 
 
 def setup_groq() -> bool:
